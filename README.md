@@ -1,34 +1,31 @@
+    ИНСТРУКЦИЯ:
+-Установи библиотеку telebot  pip install pyTelegramBotAPI
+-Запусти main.cpp
+-Можно пользоваться ботом
+NoteBook @fakeNotebookbot
+
+
     Описание проекта:
 В рамках данного проекта я поставил цель сделать телеграм бота, который будет выполнять функцию заметок.
 
 
     Реализуемый функционал:
--Регистрация и удаление пользователя
 -Возможность создания, редактирования, удаления, просмотра заметок
--Наличие базовых полей для объектов
+-Пользователь имеет доступ только к своим заметкам
 
 
     Архитектура:
-
--add_user(user_name)
--del_user(user_name)
-
- User:
-user_name
-notes
--create_note(user_name, note_name)
--edit_note(user_name, note_name)
--del_note(user_name, note_name)
--read_note(user_name, note_name)
-
- Note:
-note_name
-data
+-init_table() # создание базы данных если её нет
+-start(message) # /start
+-message_reply(message) # реакция на текстовые сообщения
+-new_note(message) # создание новой заметки
+-change_note_text(message) # редактирование текста заметки
 
 
     Технологии:
 Python3, библиотеки:
 -telebot (pyTelegramBotAPI)
+-sqlite3
 
 
     Программы используемые при реализации:
